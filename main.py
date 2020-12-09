@@ -5,7 +5,7 @@ from pydrive.auth import GoogleAuth
 from datetime import datetime
 
 #get newest file
-path = r'C:\Users\ethan\Videos\Captures'
+path = r'your path to clips'
 filelist = [os.path.join(path, f) for f in os.listdir(path)]
 filelist = [f for f in filelist if os.path.isfile(f)]
 newest = max(filelist, key=lambda x: os.stat(x).st_mtime)
@@ -21,7 +21,7 @@ drive = GoogleDrive(gauth)
 
 #varible defining
 title = "Newest Gaming Clip" + todaysDate
-fid = "1VKHKRpli4tY6JwMawlQ_4puXeNQ6YyIQ"
+fid = "your auth code"
 filename = newest[-60:]
 
 #upload clip
